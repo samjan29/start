@@ -1,0 +1,66 @@
+# day01
+
+객체지향언어에선 class 안에서 함수를 만들어야함, 그래서 JAVA에선 function과 method를 구분하지 않음
+function은 class 밖에서도 존재하는 함수
+JAVA는 무조건 class부터 시작한다.
+main 함수 = 진입점 함수 (main 함수를 가장 먼저 실행한다. JAVA에선 main 함수가 항상 있어야 하는건 아님)
+
+
+컴퓨터
+	|__ 중앙처리장치 (CPU)
+	|__ 기억장치 -
+	|  |_ 주기억장치 (RAM)
+	|  |_ 보조기억장치 (SSD/HDD)
+	|
+	|__ 입/출력장치
+	
+메모리에 올려져야 실행됨
+	
+---------------------------------------------------------------------------------------
+
+stack
+	: 변수들의 정보가 기억되는 공간
+	
+Heap
+	: 객체들의 정보가 기억되는 공간 (class를 모아놓는 장소)
+	class들이 메모리에 올려져 있는 상태 = 객체
+	new라는 명령어의 결과물이 쌓이는 공간
+
+literal pool
+	: 데이터 자체가 모여있는 공간
+	ex) System.out.println(100);
+		System.out.println("감자");
+		-------
+		100
+		감자
+		
+		동일한 데이터가 여러번 올라가지는 않음(아래서 100을 또 입력할 경우 이미 올라가 있는 100을 사용)
+		
+		
+--------------------------------------------------------------------------------------------
+
+
+int no1 =100;
+
+int num = 100;
+
+String abc = "abcd";
+
+String str = new String("abcd");
+
+abc == str (false)
+
+stack											literal pool								Heap
+
+
+no1 - int - Ex01								100 - Ex01
+num - int - Ex01																			999 ] new String() - 777
+abc - String - 777								abcd - String - 777
+str - String - 999
+
+
+notion java memory
+영타 정확도 연습
+
+wikidocs.net
+자바의 정석(파란색 표지)
