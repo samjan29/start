@@ -73,13 +73,18 @@ public class Ex04 {
 		 		상엽용		4
 		 */
 		
+		// 인덱스 변수가 필요 없는 무한반복문 만들기 == 자동 전기요금 계산기
+		// break가 꼭 필요함 안그러면 무한루프
 		while(true) {
 			// 3 - 1. 입력받아서 변수 기억시킨다.
 			int codeT = sc.nextInt();
-	//		System.out.print("입력코드 : " + codeT);
-
+			/*
+			 	블럭킹 함수(Blocking Method)
+			 		: 특정상황이 될때까지 그 함수에서 실행을 멈추고 기다리는 함수
+			 */
 			
 			if(codeT == 0) {
+				sc.close();
 				System.out.println("프로그램을 종료합니다.");
 				// 이 경우는 프로그램을 즉시 종료해야 하므로
 				break;

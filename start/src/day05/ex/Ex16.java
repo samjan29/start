@@ -14,6 +14,8 @@ package day05.ex;
 		...
 		3 x 9 = 27		5 x 9 = 45		7 x 9 = 63 		9 x 9 = 81
 		
+	주의 ]
+		카운터변수의 사용 위치가 정해져 있는 것은 아니다.
 	
 */
 public class Ex16 {
@@ -39,6 +41,25 @@ public class Ex16 {
 				if(j % 2 != 0) {
 					System.out.print(j + " x " + i + " = " + (j * i) + "\t");
 				}
+			}
+			System.out.println();
+		}
+		
+		System.out.println();
+		
+		
+		// 선생님 풀이				규칙을 먼저 찾는게 중요함!
+		for(int i = 0 ; i < 2 ; i++) {
+			
+			for(int j = 0 ; j < 9 ; j++) {
+				
+				for(int k = 0 ; k < 4 ; k++) {	// 한 행에 4번 반복함
+					int dan = 2 * k + 2 + i;
+					int gop = j + 1;
+					
+					System.out.print(dan + " x " + gop + " = " + (dan * gop) + "\t");
+				}
+				System.out.println();
 			}
 			System.out.println();
 		}
