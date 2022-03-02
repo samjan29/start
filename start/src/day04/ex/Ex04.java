@@ -8,7 +8,7 @@ package day04.ex;
  		참고 ]
  			윤년은 4로 나누어 떨어진 해 중에 100으로 나누어 떨어지고, 400으로도 나누어 떨어지는 해
  */
-import java.util.*;
+
 public class Ex04 {
 	public static void main(String[] args) {
 		// 윤년이 잘 나오는걸 보여줄 입력 도구 가져오기

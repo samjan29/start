@@ -12,6 +12,7 @@ package day04.ex;
  */
 
 import java.util.*;
+import javax.swing.JOptionPane;
 
 public class Ex05 {
 	public static void main(String[] args) {
@@ -35,6 +36,33 @@ public class Ex05 {
 		
 		// 출력
 		System.out.println("입력 받은 숫자 : " + num);
-		System.out.println(num + "은(는) " + close + "에 가까우므로 " + result + "을(를) " + str	);
+		System.out.println(num + "은(는) " + close + "에 가까우므로 " + result + "을(를) " + str);
+		
+		// 선생님 풀이
+		// 세자리 정수를 입력 받는다.
+		String sno = JOptionPane.showInputDialog("세자리 정수 입력 : ");
+		
+		// 입력 받은 데이터는 정수 형태의 문자열이므로 정수로 변환해줘야 한다.
+		// 정수 형태의 문자열을 정수로 변환해주는 기능을 가지고 있는 함수는
+		//			Integer.parseInt(문자열)
+		int no = Integer.parseInt(sno);
+		
+		// 10단위 이하만 추출해낸다.
+		int numT = no % 100;
+		
+		// numT가 50보다 큰지 판별한다.
+		int hap = 0;	// 가까운 100의 배수가 되려면 필요한 수
+		int resultT = 0;	// 가까운 100의 배수
+		
+		hap = (numT > 50) ? (100 - numT) // 76 ==> 100 - 76을 더해줘야 한다.
+				: numT;
+		
+		// resultT = (numT > 50) ? (no + hap) : (no - hap);
+		result = num > 50 ? (no / 100 + 1) * 100 : (no / 100) * 100;
+		
+		String strT = num > 50 ? "더해줘야 한다." : "빼줘야 한다.";
+		
+		// 출력
+		System.out.println("입력한 정수 " + no + " 는 " + resultT + " 가까우므로 " + hap + " 을 " + strT);
 	}
 }
