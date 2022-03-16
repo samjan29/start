@@ -90,8 +90,163 @@ public class PreEx {
 				4  4  4  4  4
 				5  5  5  5  5
 		 */
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				num[i][j] = i + 1;
+			}
+		}
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				System.out.print(num[i][j] + "  ");
+			}
+			System.out.println();
+		}
 		
+		System.out.println();
+		System.out.println();
 		
+		/*
+	 		2. 
+				1  2  3  4  5
+				1  2  3  4  5
+				1  2  3  4  5
+				1  2  3  4  5
+				1  2  3  4  5
+		 */
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				num[i][j] = j + 1;
+			}
+		}
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				System.out.print(num[i][j] + "  ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println();
+		System.out.println();
+		
+		/*
+	 		3. 
+				5  4  3  2  1
+				5  4  3  2  1
+				5  4  3  2  1
+				5  4  3  2  1
+				5  4  3  2  1
+		 */
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				num[i][j] = num[i].length - j;
+			}
+		}
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				System.out.print(num[i][j] + "  ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println();
+		System.out.println();
+		
+		/*
+		 	4.
+				1  2  3  4  5
+				5  4  3  2  1
+				1  2  3  4  5
+				5  4  3  2  1
+				1  2  3  4  5
+		 */
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				if(i % 2 == 0) {
+					num[i][j] = j + 1;
+				} else {
+					num[i][j] = num[i].length - j;
+				}
+			}
+		}
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				System.out.print(num[i][j] + "  ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println();
+		System.out.println();
+		
+		/*
+		 	5. 
+				 1  2  3  4  5
+				 6  7  8  9 10
+				11 12 13 14 15
+				16 17 18 19 20
+				21 22 23 24 25
+		 */
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				num[i][j] = j + 1 + (i * num.length);
+			}
+		}
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				if(num[i][j] < 10) {
+					System.out.print(" " + num[i][j] + " ");
+				} else {
+					System.out.print(num[i][j] + " ");
+				}
+			}
+			System.out.println();
+		}
+		
+		System.out.println();
+		System.out.println();
+		
+		/*
+		 	6.
+				 1  2  3  4  5
+				10  9  8  7  6
+				11 12 13 14 15
+				20 19 18 17 16
+				21 22 23 24 25
+		 */
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				if(i % 2 == 0) {
+					num[i][j] = j + 1 + (i * num.length);
+				} else {
+					num[i][j] = num[i].length - j + (i * num.length);
+				}
+			}
+		}
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				if(num[i][j] < 10) {
+					System.out.print(" " + num[i][j] + " ");
+				} else {
+					System.out.print(num[i][j] + " ");
+				}
+			}
+			System.out.println();
+		}
+		
+		System.out.println();
+		System.out.println();
+		
+		/*
+		 	7.
+				1  0  0  0  0
+				1  2  0  0  0
+				1  2  3  0  0
+				1  2  3  4  0
+				1  2  3  4  5
+		 */
+		for(int i = 0 ; i < num.length ; i++) {
+			
+		}
 	}
 
 }
