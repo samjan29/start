@@ -245,7 +245,123 @@ public class PreEx {
 				1  2  3  4  5
 		 */
 		for(int i = 0 ; i < num.length ; i++) {
-			
+			for(int j = 0 ; j < num[i].length ; j++) {
+				num[i][j] = j + 1;
+				
+				if(j > i) {
+					num[i][j] = 0;
+				}
+			}
+		}
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				System.out.print(num[i][j] + "  ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println();
+		System.out.println();
+		
+		/*
+		 	8.
+				 1  0  0  0  0
+				 2  3  0  0  0
+				 4  5  6  0  0
+				 7  8  9 10  0
+				11 12 13 14 15
+		 */
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				if(i == 0) {
+					num[i][j] = 1 + j; 
+				} else {
+					num[i][j] = num[i - 1][0] + i + j;
+				}
+				if(j > i) {
+					num[i][j] = 0;
+				}
+			}
+		}
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				if(num[i][j] < 10) {
+					System.out.print(" " + num[i][j] + " ");
+				} else {
+					System.out.print(num[i][j] + " ");
+				}
+			}
+			System.out.println();
+		}
+		
+		System.out.println();
+		System.out.println();
+		
+		/*
+		 	9.
+				 0  0  0  0  1
+				 0  0  0  1  2
+				 0  0  1  2  3
+				 0  1  2  3  4
+				 1  2  3  4  5
+		 */
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				if(4 - i + j < num[i].length) {
+					num[i][4 - i + j] = j + 1;
+				} else {
+					continue;
+				}
+				
+				if(j < 4 - i) {
+					num[i][j] = 0;
+				}
+			}
+		}
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				System.out.print(num[i][j] + "  ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println();
+		System.out.println();
+		
+		/*
+		 	10.
+				 0  0  0  0  1
+				 0  0  0  2  3
+				 0  0  4  5  6
+				 0  7  8  9 10
+				11 12 13 14 15
+		 */
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				if(4 - i + j < num[i].length) {
+					if(i == 0) {
+						num[i][4 - i + j] = 1 + j; 
+					} else {
+						num[i][4 - i + j] = num[i - 1][4 - i + 1] + i + j;
+					}
+				} else {
+					continue;
+				}
+				
+				if(j < 4 - i) {
+					num[i][j] = 0;
+				}
+			}
+		}
+		for(int i = 0 ; i < num.length ; i++) {
+			for(int j = 0 ; j < num[i].length ; j++) {
+				if(num[i][j] < 10) {
+					System.out.print(" " + num[i][j] + " ");
+				} else {
+					System.out.print(num[i][j] + " ");
+				}
+			}
+			System.out.println();
 		}
 	}
 

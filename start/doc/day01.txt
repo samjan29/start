@@ -25,10 +25,10 @@ Heap
 	: 객체들의 정보가 기억되는 공간 (class를 모아놓는 장소)
 	class들이 메모리에 올려져 있는 상태 = 객체
 	new라는 명령어의 결과물이 쌓이는 공간
-	Heap에 올려지는 기본형 변수는 초깃값이 정해진다. ex) 0, 0.0, (boolean은 머였더라)
+	Heap에 올려지는 기본형 변수는 초깃값이 정해진다. ex) 0, 0.0, false
 
 literal pool
-	: 데이터 자체가 모여있는 공간
+	: 데이터 자체(리터럴)가 모여있는 공간
 	ex) System.out.println(100);
 		System.out.println("감자");
 		-------
@@ -59,7 +59,7 @@ stack											literal pool								Heap
 
 no1 - int - Ex01								100 - Ex01
 num - int - Ex01																			999 ] new String() - 777
-abc - String - 777								abcd - String - 777
+abc - String - 777								"abcd" - String - 777
 str - String - 999
 
 
