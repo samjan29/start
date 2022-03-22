@@ -2,13 +2,13 @@ package day02;
 
 /**
  *  이 클래스는 변수 제작 연습용 클래스입니다.
- * @author	전다빈
+ * @author	감자튀김
  * @since	2022.02.23
  * @version v.1.0
  *
  *			변경이력 ]
  *				2022.02.23 - 클래스 제작
- *								담당자 : 전다빈
+ *								담당자 : 감자튀김
  */
 public class Test03 {
 	public static void main(String[] args) {

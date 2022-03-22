@@ -2,7 +2,7 @@ package day02;
 
 /**
  * 	이 클래스는 주석의 형식을 보여주기 위한 클래스
- * @author 전다빈
+ * @author 감자튀김
  * @since 2022.02.23
  * @version v.1.0
  *

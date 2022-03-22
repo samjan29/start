@@ -41,7 +41,7 @@ public class Test14 {
 				
 				int result = w1.getRad() - w2.getRad();
 				// 내림차순 정렬 예정이므로 부호를 반전시켜서 반환한다.
-				return result;
+				return -result;
 			}
 		});
 		Won w1 = new Won(5);
