@@ -5,21 +5,39 @@ package day15.ex;
  	10개를 TreeSet에 입력한 후
  	내림차순으로 정렬해서 출력하세요.
  */
-/*
+import java.util.*;
 public class Ex02 {
 
 	public Ex02() {
+		// TreeSet 만들기
+		TreeSet<Integer> set = new TreeSet<Integer>(new Comparator() {
+
+			@Override
+			public int compare(Object o1, Object o2) {
+				int result = 0;
+				result = (int)o1 - (int)o2;
+				return -result;
+			}
+			
+		});
+		
+		// set에 1 ~ 99 사이의 정수 10개를 입력
+		while(set.size() <= 10) {
+			set.add((int)(Math.random() * (99 - 1 + 1) + 1));
+		}
+		
+		System.out.print("| ");
+		Iterator<Integer> itor = set.iterator();
+		while(itor.hasNext()) {
+			int num = itor.next();
+			System.out.print(num + " | ");
+		}
+		
 	}
 
-	public static void main(String[] args) {
-		new Ex02();
-	}
 
-}
-*/
 
-import java.util.*;
-
+/*
 public class Ex02 {
 	
 	public Ex02() {
@@ -55,8 +73,9 @@ public class Ex02 {
 		while(itor.hasNext()) {
 			System.out.println(itor.next());
 		}
-		*/
 	}
+	 */
+	
 	
 	public static void main(String[] args) {
 		new Ex02();

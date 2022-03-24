@@ -54,6 +54,7 @@ public class Ex02 {
 		
 		Set<Entry<String, Integer>> set = subScore.entrySet();
 		Iterator itor = set.iterator();
+		System.out.print("| ");
 		while(itor.hasNext()) {
 			
 			Object sub = ((Map.Entry)(itor.next())).getKey();

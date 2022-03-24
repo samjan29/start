@@ -28,7 +28,7 @@ public class Student implements Comparable {
 			result = no - ((Student) o).getNo();
 		}
 		
-		return result;
+		return result;		// 오름차순
 	}
 	
 	public String getName() {

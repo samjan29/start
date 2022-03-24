@@ -12,21 +12,17 @@ package day15.ex;
  	반 순서대로 정렬되도록 하세요.
  	반이 같으면 번호순으로 정렬되도록 하세요.
  */
-/*
-public class Ex03 {
-
-	public Ex03() {
-	}
-
-	public static void main(String[] args) {
-		new Ex03();
-	}
-
-}
-*/
-
 import java.util.*;
 
+public class Ex03 {
+	TreeSet set = new TreeSet();
+
+	public Ex03() {
+		
+	}
+
+
+/*
 public class Ex03 {
 	ArrayList names = new ArrayList();
 	
@@ -44,7 +40,7 @@ public class Ex03 {
 		names.add("G");
 		names.add("H");
 	}
-	
+*/	
 	public static void main(String[] args) {
 		new Ex03();
 	}
