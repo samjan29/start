@@ -2,7 +2,7 @@ package day10;
 
 /**
  * 이 클래스는 친구 한명의 데이터를 기억할 클래스
- * @author	전다빈
+ * @author	
  * @since	2022.03.08
  * @version v.1.0
  * 
